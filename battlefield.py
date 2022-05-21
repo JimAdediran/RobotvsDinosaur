@@ -8,10 +8,12 @@ class Battlefield:
         self.dinosaur = Dinosaur('Kyle', 30)
 
     def run_game(self):
-            def display_welcome():
-                def battle_phase():
-                    def display_winner():
-                        pass
+        self.display_welcome()
+            
+        self.battle_phase()
+            
+        self.display_winner()
+        
 
     def display_welcome(self):
         print("Welcome ot an epic battle for the ages!")
