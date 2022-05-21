@@ -20,7 +20,7 @@ class Battlefield:
         print("Only one side can win!")
     
     def battle_phase(self):
-        while Robot.health > 0 and Dinosaur.heath > 0:
+        while self.robot.health > 0 and self.dinosaur.health > 0:
             Robot.attack
             print(f'{Robot} attacked {Dinosaur} for {Weapon.attack_power} damage!')
             print(f'{Dinosaur} has {Dinosaur.health} remaining!')
