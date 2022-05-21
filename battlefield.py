@@ -4,8 +4,8 @@ from weapon import Weapon
 
 class Battlefield:
     def __init__(self):
-        self.robot = Robot(John)
-        self.dinosaur = Dinosaur(Kyle)
+        self.robot = Robot('John')
+        self.dinosaur = Dinosaur('Kyle')
 
 def run_game(self):
             def display_welcome():
