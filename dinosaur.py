@@ -4,5 +4,5 @@ class Dinosaur:
         self.attack_power = attack_power
         self.health = 100
     def attack(self, robot):
-        robot -+ self.attack_power
+        robot -= self.attack_power
         pass
