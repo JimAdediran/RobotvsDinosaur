@@ -7,5 +7,5 @@ class Robot:
         self.active_weapon = Weapon("sword", 30)
     def attack(self, dinosaur):
         self.dinosaur = dinosaur
-        self.dinosaur -= self.active_weapon
+        self.dinosaur -= self.active_weapon.attack_power
         pass
