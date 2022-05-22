@@ -21,10 +21,10 @@ class Battlefield:
     
     def battle_phase(self):
         while self.robot.health > 0 and self.dinosaur.health > 0:
-            Robot.attack()
+            self.robot.attack(self.dinosaur)
             print(f'{self.robot.name} attacked {self.dinosaur.name} for {self.robot.active_weapon.attack_power} damage!')
             print(f'{self.dinosaur.name} has {self.dinosaur.health} remaining!')
-            Dinosaur.attack()
+            self.dinosaur.attack(self.robot)
             print(f'{self.dinosaur.name} attacked {self.robot.name} for {self.dinosaur.attack_power} damage!')
             print(f'{self.robot.name} has {self.robot.health} remaining!')
 
