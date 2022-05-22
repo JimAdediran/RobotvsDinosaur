@@ -5,7 +5,7 @@ from weapon import Weapon
 class Battlefield:
     def __init__(self):
         self.robot = Robot('JRobot')
-        self.dinosaur = Dinosaur('KDinosaur', 30)
+        self.dinosaur = Dinosaur('KDinosaur', 20)
 
     def run_game(self):
         self.display_welcome()
