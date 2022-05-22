@@ -16,7 +16,7 @@ class Battlefield:
         
 
     def display_welcome(self):
-        print("Welcome ot an epic battle for the ages!")
+        print("Welcome to an epic battle for the ages!")
         print("Only one side can win!")
     
     def battle_phase(self):
