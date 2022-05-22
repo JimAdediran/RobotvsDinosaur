@@ -4,8 +4,8 @@ from weapon import Weapon
 
 class Battlefield:
     def __init__(self):
-        self.robot = Robot('John')
-        self.dinosaur = Dinosaur('Kyle', 30)
+        self.robot = Robot('JRobot')
+        self.dinosaur = Dinosaur('KDinosaur', 30)
 
     def run_game(self):
         self.display_welcome()
@@ -21,18 +21,20 @@ class Battlefield:
     
     def battle_phase(self):
         while self.robot.health > 0 and self.dinosaur.health > 0:
-            self.robot.attack(self.dinosaur)
-            print(f'{self.robot.name} attacked {self.dinosaur.name} for {self.robot.active_weapon.attack_power} damage!')
-            print(f'{self.dinosaur.name} has {self.dinosaur.health} remaining!')
-            self.dinosaur.attack(self.robot)
-            print(f'{self.dinosaur.name} attacked {self.robot.name} for {self.dinosaur.attack_power} damage!')
-            print(f'{self.robot.name} has {self.robot.health} remaining!')
+            if self.robot.health > 0:
+                self.robot.attack(self.dinosaur)
+                print(f'{self.robot.name} attacked {self.dinosaur.name} for {self.robot.active_weapon.attack_power} damage!')
+                print(f'{self.dinosaur.name} has {self.dinosaur.health} remaining!')
+            if self.dinosaur.health >0:
+                self.dinosaur.attack(self.robot)
+                print(f'{self.dinosaur.name} attacked {self.robot.name} for {self.dinosaur.attack_power} damage!')
+                print(f'{self.robot.name} has {self.robot.health} remaining!')
 
     def display_winner(self):
-        if Robot.health <= 0:
-            print(f'{Dinosaur} made {Robot} extinct!')
-            print(f'{Dinosaur} wins!')
+        if self.robot.health <= 0:
+            print(f'{self.dinosaur.name} made {self.robot.name} extinct!')
+            print(f'{self.dinosaur.name} wins!')
         else:
-            print(f'{Robot} made {Dinosaur} extinct!')
-            print(f'{Robot} wins!')
+            print(f'{self.robot.name} made {self.dinosaur.name} extinct!')
+            print(f'{self.robot.name} wins!')
             pass
